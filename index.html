@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick button</title>
+</head>
+<body>
+    <input type="text" id="text1">
+    <input type="text" id="text2"><br><br>
+    <div id="display1"></div>
+    <div id="display2"></div>
+    <div id="display3"></div>
+    <div id="display4"></div>
+
+    <button onclick="alloperation()">all operations</button>
+    <!-- <button onclick="add()">+</button> -->
+    <!-- <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button> -->
+    
+    <script>
+        function alloperation(){
+            
+            const displayinfo1 = +(document.getElementById("text1").value);
+            const displayinfo2 = +(document.getElementById("text2").value);
+
+            document.getElementById("display1").innerHTML = displayinfo1 + displayinfo2;
+            document.getElementById("display2").innerHTML = displayinfo1 - displayinfo2;
+            document.getElementById("display3").innerHTML = displayinfo1 * displayinfo2;
+            document.getElementById("display4").innerHTML = displayinfo1 / displayinfo2;
+
+        }
+        // function sub(){
+        //     const displayinfo1 = +(document.getElementById("text1").value);
+        //     const displayinfo2 = +(document.getElementById("text2").value);
+
+        //     document.getElementById("display2").innerHTML = displayinfo1 - displayinfo2;
+        // }
+        // function mul(){
+        //     const displayinfo1 = +(document.getElementById("text1").value);
+        //     const displayinfo2 = +(document.getElementById("text2").value);
+
+        //     document.getElementById("display3").innerHTML = displayinfo1 * displayinfo2;
+        // }
+        // function div(){
+        //     const displayinfo1 = +(document.getElementById("text1").value);
+        //     const displayinfo2 = +(document.getElementById("text2").value);
+
+        //     document.getElementById("display4").innerHTML = displayinfo1 / displayinfo2;
+        // }
+    </script>
+</body>
+</html>
